@@ -336,7 +336,8 @@
 
         @media (max-width: 768px) {
             img{
-                width:60vw;
+                width:40vw;
+                border-radius: 2px;
             }
             .form-row {
                 grid-template-columns: 1fr;
