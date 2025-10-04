@@ -316,7 +316,11 @@ img{
             background: linear-gradient(135deg, #ff8c42 0%, #ffa654 100%);
             transform: translateY(-1px);
         }
-
+.preview{
+    display:flex;
+    flex-direction:column;
+    flex:1;
+}
         @media (max-width: 768px) {
             img{
                 width:52vw;
