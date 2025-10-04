@@ -94,7 +94,10 @@ img{
         .form-group {
             margin-bottom: 28px;
         }
-
+.form-group p{
+    color:red;
+    font-size:14px;
+}
         .form-row {
             display: grid;
             grid-template-columns: 1fr 1fr;

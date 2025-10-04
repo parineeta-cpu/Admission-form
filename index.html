@@ -22,11 +22,12 @@
             <div class="form-row">
                 <div class="form-group">
                     <label>Course:<span style="color: #f73a0b;">*</span></label>
-                    <input type="text"required>
+                    <input type="text" spellcheck="true" required>
                 </div>
                 <div class="form-group">
                     <label>Name of the student:<span style="color: #f73a0b;">*</span></label>
-                    <input class="name" type="text" required>
+                    <input class="name" type="text" spellcheck="true" required>
+                    <p class="error1"></p>
                 </div>
             </div>
 
@@ -34,6 +35,7 @@
                 <div class="form-group">
                     <label>DOB:<span style="color: #f73a0b;">*</span></label>
                     <input class="dob" type="date" required >
+                    <p class="error2"></p>
                 </div>
                 <div class="form-group">
                     <label>Select Gender:<span style="color: #f73a0b;">*</span></label>
@@ -49,6 +51,7 @@
             <div class="form-group">
                 <label>Adhaar No (optional):</label>
                 <input class="adhaarNo" type="number">
+                <p class="error3"></p>
             </div>
 
             <div class="section-title">Parent/Guardian Information</div>
@@ -57,10 +60,11 @@
                 <div class="form-group">
                     <label>Father's/Husband's name:<span style="color: #f73a0b;">*</span></label>
                     <input class="guardianName" type="text" required>
+                    <p class="error4"></p>
                 </div>
                 <div class="form-group">
                     <label>Occupation:<span style="color: #f73a0b;">*</span></label>
-                    <input class="occupation" type="text" required>
+                    <input class="occupation" type="text" spellcheck="true" required>
                 </div>
             </div>
 
@@ -68,23 +72,24 @@
 
             <div class="form-group">
                 <label>Permanent address:<span style="color: #f73a0b;">*</span></label>
-                <input class="address" type="text" required>
+                <input class="address" type="text" spellcheck="true" required>
             </div>
 
             <div class="form-row">
                 <div class="form-group">
                     <label>District:<span style="color: #f73a0b;">*</span></label>
-                    <input class="district" type="text" required>
+                    <input class="district" type="text" spellcheck="true" required>
                 </div>
                 <div class="form-group">
                     <label>State:<span style="color: #f73a0b;">*</span></label>
-                    <input class="state" type="text" required>
+                    <input class="state" type="text" spellcheck="true" required>
                 </div>
             </div>
 
             <div class="form-group">
                 <label>Pincode:<span style="color: #f73a0b;">*</span></label>
                 <input class="pincode" type="number" required>
+                <p class="error5"></p>
             </div>
 
             <div class="section-title">Contact Information</div>
@@ -93,10 +98,12 @@
                 <div class="form-group number">
                     <label>Mobile no:<span style="color: #f73a0b;">*</span></label>
                     <input class="mobileNo" type="number" required>
+                    <p class="error6"></p>
                 </div>
                 <div class="form-group">
                     <label>Emergency Contact No:<span style="color: #f73a0b;">*</span></label>
                     <input class="number2" type="number" required>
+                    <p class="error7"></p>
                 </div>
             </div>
 
@@ -120,6 +127,7 @@
                 <div class="form-group">
                     <label>Upload your image:<span style="color: #f73a0b;">*</span></label>
                     <input class="studentImg" type="file" accept="image/*" required>
+                    <p class="error8"></p>
                 </div>
             </div>
 
@@ -133,12 +141,13 @@
                             <th>Board/University <span style="color: #ffeb3b;">*</span></th>
                             <th>Year <span style="color: #ffeb3b;">*</span></th>
                             <th>Marks % <span style="color: #ffeb3b;">*</span></th>
+                            
                         </tr>
                     </thead>
                     <tbody id="educationTable">
                         <tr>
-                            <td><input type="text" class="edu-qualification" required></td>
-                            <td><input type="text" class="edu-board" required></td>
+                            <td><input type="text" spellcheck="true" class="edu-qualification" required></td>
+                            <td><input type="text" spellcheck="true" class="edu-board" required></td>
                             <td><input type="number" class="edu-year" min="1950" max="2025" required></td>
                             <td><input type="number" class="edu-marks" min="0" max="100" step="0.01" required></td>
                         </tr>
@@ -149,6 +158,7 @@
             <div class="checkbox-group">
                 <input class="checkbox" type="checkbox" required>
                 <label>I agree to all the terms and conditions mentioned on <a href="https://www.srgeducation.in/privacy-policy">www.srgeducation.in/privacy-policy</a></label>
+            <p class="error9"></p>
             </div>
 
             <button class="submit-btn" type="submit">Submit Application</button>
