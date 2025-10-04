@@ -3,7 +3,7 @@ const submitBtn = document.querySelector(".submit-btn");
 form.addEventListener("submit",(e)=>{
  e.preventDefault();
    const nameInput= document.querySelector(".name");
-   const dobInput=document.querySelector(".dob");
+   
    const genderInput=document.querySelector("#gender");
    const adhaarNoInput=document.querySelector(".adhaarNo");
    const GuardianNameInput= document.querySelector(".guardianName");
@@ -17,11 +17,28 @@ form.addEventListener("submit",(e)=>{
    const emailInput=document.querySelector(".email");
    const studentImg=document.querySelector(".studentImg");
    const checkbox=document.querySelector(".checkbox");
+   const qualification=document.querySelector(".edu-qualification");
+   const board=document.querySelector(".edu-board");
+   const passingYear=document.querySelector(".edu-year");
+   const result=document.querySelector(".edu-marks");
 
    if(nameInput.value.length < 3){
     alert("Name must be atleat 3 characters long");
     return;
    }
+  
+    const today = new Date();
+    const dobInput=document.querySelector(".dob").value;
+    const dob = new Date(dobInput);
+    let age = today.getFullYear()-dob.getFullYear();
+    const m = today.getMonth()-dob.getMonth();
+    if(m<0||(m===0&&today.getDate()<dob.getDate())){
+      age--;
+    }
+    if(age<10||age>80){
+      alert("Age should be between 10-80");
+      return;
+    }
    
     if(genderInput.value===""){
     alert("Please select your gender");
@@ -101,11 +118,14 @@ const height = img.height;
     alert("Please agree to all Terms&conditions");
      return;
    }
+   if(result.value<0 || result.value>100){
+alert("Please enter your valid marks between 1-100");
+return;
+   }
    else {
     alert("Form submitted successfully✔");
    }
   }
-   console.log(studentImg.files[0])
-   
-    } }
+    }
+   }
 );
